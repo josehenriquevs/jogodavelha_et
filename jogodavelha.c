@@ -15,7 +15,6 @@
 
 #define LED_QTD 25
 #define LED_PIN 7
-#define BOTAO_A 5
 #define BOTAO_B 6  
 #define BUZZER_PIN 21
 
@@ -358,11 +357,8 @@ int main() {
     adc_init();
     adc_gpio_init(26);
     adc_gpio_init(27);
-    gpio_init(BOTAO_A);
     gpio_init(BOTAO_B);
-    gpio_set_dir(BOTAO_A, GPIO_IN);
     gpio_set_dir(BOTAO_B, GPIO_IN);
-    gpio_pull_up(BOTAO_A);
     gpio_pull_up(BOTAO_B);
 
     npInit(LED_PIN);
