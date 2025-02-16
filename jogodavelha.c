@@ -462,7 +462,8 @@ int main() {
 
         int nova_linha = adc_y_raw * 3 / 4096;
         int nova_coluna = adc_x_raw * 3 / 4096;
-
+        
+        desenhaTabuleiro(cursor_linha, cursor_coluna);
         if (nova_linha != cursor_linha || nova_coluna != cursor_coluna) {
             cursor_linha = nova_linha;
             cursor_coluna = nova_coluna;
