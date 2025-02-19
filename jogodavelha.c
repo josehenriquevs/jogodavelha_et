@@ -211,7 +211,7 @@ void desenhaTabuleiro(int cursor_linha, int cursor_coluna) {
     // Verifica se o cursor está sobre um LED já marcado (X ou O)
     if (tabuleiro[cursor_linha][cursor_coluna] == 0) {
         // O LED não está marcado, então coloca a cor verde normal.
-        npSetLED(cursor_index, 0, 80, 0); // Verde mais suave
+        npSetLED(cursor_index, 0, 80, 0);
     } else if (tabuleiro[cursor_linha][cursor_coluna] == 1) {
         // Se o LED estiver marcado com X, mantém a cor vermelha em um tom mais claro.
         npSetLED(cursor_index, 40, 0, 0);
@@ -269,7 +269,7 @@ int checarEmpate() {
 // Desenha uma seta na Matriz, apontada para o Display.
 void acenderleds_setaDisplay(){
     const int leds_setaDisplay[] = {0, 1, 2, 8, 9, 10, 12, 16, 24};
-    for (int cont = 0; cont < 8; cont++){
+    for (int cont = 0; cont < 6; cont++){
         tocar_beepsimples(BUZZER_PIN);
         for (int i = 0; i < sizeof(leds_setaDisplay)/sizeof(leds_setaDisplay[0]); i++) {
             npSetLED(leds_setaDisplay[i], 0, 80, 0);  // Acende o LED
@@ -287,7 +287,7 @@ void acenderleds_setaDisplay(){
 // Desenha uma seta na Matriz, apontada para o Joystick
 void acenderleds_setaJoystick(){
     const int leds_setaJoystick[] = {2, 3, 4, 5, 6, 12, 14, 18, 20};
-    for (int cont = 0; cont < 10; cont++){
+    for (int cont = 0; cont < 8; cont++){
         tocar_beepsimples(BUZZER_PIN);
         for (int i = 0; i < sizeof(leds_setaJoystick)/sizeof(leds_setaJoystick[0]); i++) {
             npSetLED(leds_setaJoystick[i], 0, 80, 0);  // Acende o LED
@@ -306,7 +306,7 @@ void acenderleds_setaJoystick(){
 void acenderleds_setaBotaoB(){
     const int leds_setaBotaoB[] = {8, 10, 11, 12, 13, 14, 18};
     
-    for (int cont = 0; cont < 10; cont++){
+    for (int cont = 0; cont < 8; cont++){
         tocar_beepsimples(BUZZER_PIN);
         for (int i = 0; i < sizeof(leds_setaBotaoB)/sizeof(leds_setaBotaoB[0]); i++) {
             npSetLED(leds_setaBotaoB[i], 0, 80, 0);  // Acende o LED
