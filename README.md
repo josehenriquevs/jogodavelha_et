@@ -63,6 +63,9 @@ O código é dividido em módulos principais:
 - Implementação de mais efeitos, visuais e sonoros.
 - Opção de jogar contra o algoritmo.
 
+## Apresentação em Vídeo
+https://youtube.com/shorts/L1O1Z8epDWc?si=lBBwd-6GBS6r742n
+
 ## Créditos
 Neste projeto foi utilizado arquivos do repositório [BitDogLab-C](https://github.com/BitDogLab/BitDogLab-C).
 
